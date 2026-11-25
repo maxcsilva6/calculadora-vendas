@@ -18,25 +18,25 @@
 
   <p id="resultado"></p>
 
-  <script>
-    function calcular() {
-      const preco = Number(document.getElementById("preco").value);
-      const quantidade = Number(document.getElementById("quantidade").value);
-      const resultado = document.getElementById("resultado");
+ <script>
+  function calcular() {
+    const preco = Number(document.getElementById("preco").value);
+    const quantidade = Number(document.getElementById("quantidade").value);
+    const resultado = document.getElementById("resultado");
 
-      if (preco <= 0 || !Number.isInteger(quantidade) || quantidade <= 0) {
-        resultado.textContent = "Informe um preço e uma quantidade válidos.";
-        return;
-      }
-
-      const total = preco * quantidade;
-
-      resultado.textContent = "Total da venda: " +
-        total.toLocaleString("pt-BR", {
-          style: "currency",
-          currency: "BRL"
-        });
+    if (preco <= 0 || !Number.isInteger(quantidade) || quantidade <= 0) {
+      resultado.textContent = "Informe um preço e uma quantidade válidos.";
+      return;
     }
-  </script>
+
+    const total = preco * quantidade;
+
+    resultado.textContent = "Total da venda: " +
+      total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+      });
+  }
+</script>
 </body>
 </html>
